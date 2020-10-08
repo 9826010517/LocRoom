@@ -2,12 +2,8 @@ import React from 'react';
 import Footer from './footer';
 
 class Home extends React.Component {
- 
-
    render() {
       return (
-        //   <div className="container">
-        //        <div className="row">
         <main>
         <div class="slider-area ">
             <div class="slider-active">
@@ -117,9 +113,6 @@ class Home extends React.Component {
                     </div>
                 </div>
             </div>
-            {/* <div class="features-shpae d-none d-lg-block">
-                <img src="assets/img/shape/best-features.png" alt=""></img>
-            </div> */}
         </section>
       
        {/* What customer say */}
@@ -181,10 +174,7 @@ class Home extends React.Component {
                                 <h2>Start using InfyChat now</h2>
                                 <p>Start using InfyChat now.</p>
                                 <div class="app-btn">
-                                    {/* <h1>Get Started</h1> */}
-                                    <button type="button" class="btn btn-danger">Get Started</button>
-                                    {/* <a href="#" class="app-btn1"><img src="assets/img/shape/app_btn1.png" alt=""></img></a>
-                                    <a href="#" class="app-btn2"><img src="assets/img/shape/app_btn2.png" alt=""></img></a> */}
+                                    <button type="button" class="btn btn-danger getstarted_btn">Get Started</button>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +190,6 @@ class Home extends React.Component {
             <div class="app-shape">
                 <img src="assets/img/shape/app-shape-top.png" alt="" class="app-shape-top heartbeat d-none d-lg-block"></img>
                 <img src="assets/img/shape/app-shape-left.png" alt="" class="app-shape-left d-none d-xl-block"></img>
-                {/* <!-- <img src="assets/img/shape/app-shape-right.png" alt="" class="app-shape-right bounce-animate "> --> */}
             </div>
         </div>
        
@@ -208,9 +197,6 @@ class Home extends React.Component {
     
      <Footer />
     </main>
-        //       </div>
-        //   </div>
-     
       );
    }
 }

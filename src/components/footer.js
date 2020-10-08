@@ -24,7 +24,7 @@ class Footer extends React.Component {
                      <div class="col-lg-5 col-md-4 col-sm-8">
                           <div class="single-footer-caption mb-30">
                               <div class="footer-logo">
-                                  <a href="index.html"><img src="assets/img/logo/locroompng.png" alt=""></img></a>
+                                  <a href="index.html"><img src="assets/img/logo/locroom1.png" alt=""></img></a>
                               </div>
                               <div class="footer-tittle">
                                   <div class="footer-pera">

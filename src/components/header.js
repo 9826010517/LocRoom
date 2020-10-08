@@ -3,6 +3,7 @@ import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import Home from './home' ;
 import Register from './register';
 import Login from './login';
+import Loggedheader from './loggedheader';
 import $ from 'jquery';
 import './globle.css';
 
@@ -42,6 +43,9 @@ class Header extends React.Component {
             <li className="nav-item">
             <Link to="/register" className="nav-link">Rgister</Link>
             </li>
+            <li className="nav-item">
+            <Link to="/conversations" className="nav-link">conversations</Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -50,8 +54,8 @@ class Header extends React.Component {
          <Route exact path="/" component={Home} />
          <Route path="/login" component={Login} />
          <Route path="/register" component={Register} />
+         <Route path="/conversations" component={Loggedheader} />
       </ BrowserRouter >
-        
       );
    }
 }

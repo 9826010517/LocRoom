@@ -24,7 +24,31 @@ color: #055379 !important;
 .slider-padding {
     padding-top: 0px;
 }
+.service-area .services-caption .service-icon span{
+    background: #055379 !important; ;
+}
+.service-area .services-caption .service-cap h4 a {
+    color: #055379 !important;
+}
+.best-features-area .single-features .features-icon span {
+  
+    background-image:linear-gradient(90deg, #055379 0%, #926ef8 100%);
 
+}
+.best-features-area .single-features .features-caption h3 {
+    color: #055379;
+}
+a.btn.radius-btn {
+    background: #055379;
+}
+a.btn.radius-btn::before {
+    background: none;
+}
+/* button.btn.btn-danger {
+} */
+/* .getstarted_btn{
+    background: #055379;
+} */
 .navigation_body {
     background-color: #F4FEFF;
     position: fixed;
@@ -41,9 +65,10 @@ color: #055379 !important;
     padding-bottom: 0px;
 }
 .available-app-area {
-    background-image: -moz-linear-gradient(0deg, #055379 0%, #f9218d 100%) !important;
-    background-image: -webkit-linear-gradient(0deg, #055379 0%, #f9218d 100%) !important;
-    background-image: -ms-linear-gradient(0deg, #6c19f6 0%, #f9218d 100%) !important;
+    background-image: linear-gradient(0deg, #005D81 0%, #221d509e 100%) !important;
+    /* background-image: -moz-linear-gradient(0deg, #055379 0%, #f9218d 100%);
+    background-image: -webkit-linear-gradient(0deg, #005D81 0%, #221d509e 100%);
+    background-image: -ms-linear-gradient(0deg, #6c19f6 0%, #f9218d 100%); */
 }
 /* Footer */
 
@@ -53,4 +78,14 @@ color: #055379 !important;
 }
 .footer-area .footer-copy-right {
     padding-top: 0px;
+}
+/* .footer-main {
+    background: #f4feff;
+} */
+.footer-area .footer-tittle ul li a {
+    color: #222222;
+    font-weight: 400;
+}
+.footer-area .footer-pera .info1 {
+    color: #222222;
 }
