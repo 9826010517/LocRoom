@@ -1,0 +1,56 @@
+/* Navigation body header section*/
+.navigation_body{
+    background-color: #F4FEFF;
+}
+a.nav-link{
+color: #055379 !important;
+}
+/* .logoimg{
+    width:22%;
+} */
+@media (max-width: 991px){
+    .container{
+        max-width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;  
+    }
+}
+
+/* home componenet */
+.slider-padding {
+    padding-top: 0px;
+}
+
+.navigation_body {
+    background-color: #F4FEFF;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+.activeheader{
+    background-color:#FFFF;
+    box-shadow: 0 10px 15px rgba(25,25,25,0.1);
+}
+
+.section-padd4 {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+.available-app-area {
+    background-image: -moz-linear-gradient(0deg, #055379 0%, #f9218d 100%) !important;
+    background-image: -webkit-linear-gradient(0deg, #055379 0%, #f9218d 100%) !important;
+    background-image: -ms-linear-gradient(0deg, #6c19f6 0%, #f9218d 100%) !important;
+}
+/* Footer */
+
+.footer-padding {
+    padding-top: 39px;
+    padding-bottom: 0px;
+}
+.footer-area .footer-copy-right {
+    padding-top: 0px;
+}
