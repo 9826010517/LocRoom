@@ -1,9 +1,15 @@
 import React from 'react';
-import Header from './components/header'
+import Navigation from './components/navigation'
 class App extends React.Component {
+   constructor(props){
+      super(props);
+   }
+  
    render() {
       return (
-         <Header />
+         <div >
+         <Navigation />
+         </div>
       );
    }
 }
