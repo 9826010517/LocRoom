@@ -90,7 +90,7 @@ a.btn.radius-btn::before {
     color: #222222;
 }
 
-/* ADMIN */
+/* ADMIN loggedheader */
 
 .btn::before{
     background: none !important;
@@ -164,4 +164,9 @@ a#uncontrolled-tab-example-tab-profile.active {
 }
 a#uncontrolled-tab-example-tab-home.active {
     border-bottom: 1px solid blue;
+}
+.logger_singleuser{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
