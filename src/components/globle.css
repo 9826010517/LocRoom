@@ -97,7 +97,7 @@ a.btn.radius-btn::before {
 }
 .btn{
     background:  #07597E !important;
-    border-color: #07597E !important;
+    border-color: #16181a !important;
 }
 
 .dropdownimg{
@@ -165,8 +165,61 @@ a#uncontrolled-tab-example-tab-profile.active {
 a#uncontrolled-tab-example-tab-home.active {
     border-bottom: 1px solid blue;
 }
-.logger_singleuser{
+.logger_singleuserimg{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.logger_sidetab1 {
+    vertical-align: top;
+    display: inline-block;
+}
+.logger_sidetab2 {
+    display: inline-block;
+    margin-left: 8px;
+}
+.logger_chatusername {
+    margin-bottom: 0px;
+    font-size: 13px;
+    padding-bottom: 0px;
+    padding-top:4px;
+}
+.logger_chatusertagline {
+    padding-top: 0px;
+    margin-top: 0px;
+    line-height: 20px;
+    font-size: 11px;
+}
+.logger_chartime {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 24px;
+    padding-top: 5px;
+}
+.logger_dropdownbtn{
+    transform: rotate(90deg);
+    padding: .200rem .2rem;
+    background: none !important;
+    border: none !important;
+}
+.logger_dropdownbtn::after{
+display: none;
+}
+p.logger_drptext {
+    margin: 0;
+    line-height: 13px;
+    font-size: 22px;
+    color: #07597E !important;
+}
+.blackButton{
+    border-left: 2px solid green;
+    background: #e6e6e6;
+}
+.blackButton:hover{
+    cursor: pointer;
+    background: #e6e6e6;
+}
+.loggerinnerbody{
+    cursor: pointer;
 }

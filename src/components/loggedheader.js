@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import Loggerbody from './loggerbody'
+// import Loggertesting from './loggertesting'
 // import gatsbyIconImage from '../../public/assets/adminsection/dist/img/AdminLTELogo.png'
 export class Loggedheader extends React.Component {
    render() {
@@ -75,7 +76,8 @@ export class Loggedheader extends React.Component {
       {/* <!-- Content Wrapper. Contains page content --> */}
       
          <Loggerbody />
-        
+        {/* testing*/}
+        {/* <Loggertesting /> */}
        </div>
        </div>  
       // +++++++++++++
