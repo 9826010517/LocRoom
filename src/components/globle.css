@@ -19,7 +19,26 @@ color: #055379 !important;
         margin-right: 0px;  
     }
 }
-
+/* conversion body height from loggerbody component */
+.conversion_bodyinner{
+    height:83vh;
+}
+/* testing */
+.wrapper{
+    height:97vh !important;
+}
+.sidenavbot_footer {
+    /* background: fixed; */
+    /* position: fixed; */
+    bottom: 0;
+    width: 98%;
+    position: absolute;
+    border-top: 1px solid #80808057;
+}
+#main{
+    /* height: 100%; */
+}
+/* testing */
 /* home componenet */
 .slider-padding {
     padding-top: 0px;
@@ -136,6 +155,7 @@ a.btn.radius-btn::before {
     box-shadow: -1px -5px 0 0 rgba(0,0,0,.01);
     border-radius: 0px 7px 7px 0px;
     background-color: #fff;
+    position: relative;
 }
 .chaticon {
     color: green;
@@ -222,4 +242,268 @@ p.logger_drptext {
 }
 .loggerinnerbody{
     cursor: pointer;
+}
+.activeuserimg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.activeuser {
+    display: inline-block;
+    vertical-align: top;
+}
+.activeuser_detail {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.activeusername {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.activeuser_tagline {
+    line-height: 21px;
+    font-size: 13px;
+    color: green;
+    margin-bottom: 0;
+}
+
+/* Css for right navigation */
+
+
+/* .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } */
+
+  .sidenav {
+    box-shadow: 0 0px 3px rgba(0,0,0,.25),0 0px 0px rgba(0,0,0,.22)!important;
+    height: 100%;
+    width: 0;
+    /* position: fixed; */
+    z-index: 1111;
+    top: 0;
+    right: 0;
+    background-color:#ffffff;
+    /* background-color: #111; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15px;
+    position: absolute;
+  }
+  
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+  }
+  
+  .slideBtn {
+    transition: .5s;
+    /* position: fixed; */
+    right: 37px;  
+    font-size:30px;
+    cursor:pointer;
+    margin-right:10px;
+  }
+  
+  #main {
+    transition: .5s;  
+    background-color:white;
+  }
+  
+  section{
+    padding: 0px;
+    margin:0px;
+    /* border-bottom: 1px solid #80808057; */
+    /* padding:20px; */
+  }
+  section+section{
+    padding-top:0;
+  }
+  
+  article{  
+    border-top:1px solid green;
+    background-color:gray;
+  }
+  .sidenavImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+.sidenav_status{
+    font-size: 12px;
+    color: #07597E;
+}
+.sidenav_statusdot{
+    color: green;
+}
+.sidenav_abouttag{
+    color: #07597E;
+}
+.sidenavinner1{
+    border-bottom: 1px solid #07597E;
+}
+
+.sidenav_bioheading {
+    padding-top: 8px;
+    color: #07597E;
+    margin-bottom: 0;
+}
+.sidenav_biotext {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: start;
+    padding-left: 9px;
+    color: black;
+}
+.typetextbox1{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.textboxinput{
+    background-color: #8080803b !important;
+}
+.sendicon {
+    background-color: #8080803b;
+    padding: 16px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.sendbtn {
+    margin: 6px;
+    border-radius: 50%;
+    background-color: #8080803b !important;
+    border: none;
+    color: black;
+}
+.sendbtn:hover{
+    color: #07597E !important;
+}
+.sidenav_bodysection1 {
+    border-bottom: 1px solid #80808057;
+}
+
+.chat__msg-day-divider {
+    height: 1px;
+    background-color: #ebebeb;
+    margin: 35px 0;
+}
+.chat__msg-day-title {
+    width: fit-content;
+    background-color: #fff;
+    font-weight: 500;
+    position: relative;
+    height: 42px;
+    border-radius: 4px;
+    top: -22px;
+    padding: 10px 25px;
+}
+.sidenavbot_footerinner{
+    background: #fff;
+}
+/* ******************* */
+
+
+#chat{
+    padding-left:0;
+    margin:0;
+    list-style-type:none;
+    overflow-y:scroll;
+    height:535px;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
+    text-align: start;
+    height: calc(100vh - 35vh);
+}
+#chat li{
+    padding:10px 30px;
+}
+#chat h2,#chat h3{
+    display:inline-block;
+    font-size:13px;
+    font-weight:normal;
+}
+#chat h3{
+    color:#bbb;
+}
+#chat .entete{
+    margin-bottom:5px;
+}
+#chat .message{
+    padding:20px;
+    color:#fff;
+    line-height:25px;
+    max-width:90%;
+    display:inline-block;
+    text-align:left;
+    border-radius:5px;
+}
+#chat .me{
+    text-align:right;
+}
+#chat .you .message{
+    background-color:#58b666;
+}
+#chat .me .message{
+    background-color:#6fbced;
+}
+#chat .triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+}
+#chat .you .triangle{
+        border-color: transparent transparent #58b666 transparent;
+        margin-left:15px;
+}
+#chat .me .triangle{
+        border-color: transparent transparent #6fbced transparent;
+        margin-left: auto;
+        margin-right: 15px;
+        /* margin-left:375px; */
+}
+.entete>h2{
+    margin: 6px;
 }
