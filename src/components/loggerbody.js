@@ -1,19 +1,27 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Tabs,Tab } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Button,Modal } from 'react-bootstrap';
+import {Createnewgroup,Createnewconversation} from './newcoversationmodal';
 import { Dropdown } from 'react-bootstrap';
 import $ from 'jquery';
 export class Loggerbody extends React.Component {
-    state = {
+    constructor(props){
+    super(props);
+    this.state = {
          arr : [{"id":"1","name":"amit mishra","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
         {"id":"2","name":"amit mishra1","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
         {"id":"3","name":"amit mishra2","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
         {"id":"4","name":"amit mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}
       ],
-        selected: ""
+      selected: ""
+     
       };
+    }
+   
     
+
+    // ++++++++++
       changeColor = id => {
         this.setState({ selected: id });
         console.log('new section',id)
@@ -29,8 +37,15 @@ export class Loggerbody extends React.Component {
         document.getElementById("mySidenav").style.width = "0";
       }
       
-    // 
+//    
+
+
+
+// 
+  
+
       render() {
+
         $(document).ready(function(){
             $(".slideBtn").click(function(){    
               if($("#sidenav").width() == 0){      
@@ -56,8 +71,10 @@ export class Loggerbody extends React.Component {
                       <div className="row">
                           <div className="col-6 my-auto pl-3" ><h5>Conversations</h5></div>
                           <div className="col-6 text-right">
-                          <i className="fa fa-users chaticon" aria-hidden="true"></i>
-                          <i className="fa fa-comment chaticon" aria-hidden="true"></i>
+                          {/* <i className="fa fa-users chaticon" aria-hidden="true"></i> */}
+                          <Createnewgroup checktest="testing" />
+                          <Createnewconversation /> 
+                          {/* <i className="fa fa-comment chaticon" aria-hidden="true"></i> */}
                           </div>
                           <div className="col-12 mt-1">
                                 <Form>
@@ -171,9 +188,8 @@ export class Loggerbody extends React.Component {
                                 </div>
                          </div>
                           {/*Center body */}
-                                 <div id="main">
-                                 <section className="sidenav_bodysection1 pt-2 pb-2">
-                                 {/* <div id="slidebtn" className="slideBtn">&#9776;</div>   */}
+                           <div id="main">
+                               <section className="sidenav_bodysection1 pt-2 pb-2">
                                  <div className="row">
                                  <div className="col-8 text-left pt-2 pl-2">
                                   <div className="activeuser">
@@ -286,7 +302,6 @@ export class Loggerbody extends React.Component {
                                             <i class="fa fa-paper-plane " aria-hidden="true"></i>
                                             </Button>
                                          </Form>
-                                        
                                        </div>
                              </section>
                            </div>
@@ -295,6 +310,9 @@ export class Loggerbody extends React.Component {
                   </div>
               </div>
               {/* **************** */}
+              {/* for model code */}
+               {/* <Logmodeltest /> */}
+              {/* for model code */}
               </div>
           );
       }
