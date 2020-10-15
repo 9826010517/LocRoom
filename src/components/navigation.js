@@ -20,16 +20,16 @@ callbackFunction = (childData) => {
 // /////////////////////////
    render() {
       { window.location.pathname == "/conversations" ? this.state.message = false : this.state.message = true }
- $(function() {
-            $(window).on("scroll", function() {
-                if($(window).scrollTop() > 50) {
-                      $(".navigation_body").addClass("activeheader");
-                } 
-                else {
-                      $(".navigation_body").removeClass("activeheader");
-             }
-      });
-   });
+            $(function() {
+                        $(window).on("scroll", function() {
+                           if($(window).scrollTop() > 50) {
+                                 $(".navigation_body").addClass("activeheader");
+                           } 
+                           else {
+                                 $(".navigation_body").removeClass("activeheader");
+                        }
+                  });
+               });
 
     const { hideHeader } = this.state.message;
 

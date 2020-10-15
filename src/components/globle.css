@@ -171,20 +171,14 @@ a.btn.radius-btn::before {
     /* width: 50%; */
     /* border-color: #dee2e6 #dee2e6 #fff; */
 }
-a#uncontrolled-tab-example-tab-profile {
+.asidetabchat{
     text-align: center;
     width: 50%;
 }
-a#uncontrolled-tab-example-tab-home {
-    text-align: center;
-    width: 50%;
+.asidetabchat.active{
+    border-bottom: 1px solid blue !important;
 }
-a#uncontrolled-tab-example-tab-profile.active {
-    border-bottom: 1px solid blue;
-}
-a#uncontrolled-tab-example-tab-home.active {
-    border-bottom: 1px solid blue;
-}
+
 .logger_singleuserimg{
     width: 40px;
     height: 40px;
@@ -485,25 +479,29 @@ p.logger_drptext {
 #chat .you .message{
     background-color:#58b666;
 }
+
 #chat .me .message{
     background-color:#6fbced;
 }
+
 #chat .triangle{
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
 }
+
 #chat .you .triangle{
         border-color: transparent transparent #58b666 transparent;
         margin-left:15px;
 }
+
 #chat .me .triangle{
         border-color: transparent transparent #6fbced transparent;
         margin-left: auto;
         margin-right: 15px;
-        /* margin-left:375px; */
 }
+
 .entete>h2{
     margin: 6px;
 }
@@ -512,9 +510,12 @@ p.logger_drptext {
 /* model dialogue box */
 
 @media (min-width: 576px){
-.modal-dialog {
+.groupmodalbody {
     max-width: 45%;
     margin: 1.75rem auto;
+}
+.newconversationmodal{
+    max-width:30% !important;
 }
 }
 
@@ -543,10 +544,6 @@ p.logger_drptext {
     margin-right: -50%;
     transform: translate(-50%, 128%);
    
-  }
-  
-  .avatar-upload .avatar-edit input {
-    /* display: none; */
   }
   
   .avatar-upload .avatar-edit .custom-label {
@@ -652,4 +649,59 @@ input[type="file"] {
     font-size: 13px;
     padding: 6px;
     border: none;
+}
+.membersdiv {
+    max-height: 310px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.groupmodelinner1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.removebtn{
+    font-size: 13px;
+    padding: 6px;
+    border: none;
+    background: #ff0400 !important;
+}
+.groupcancelbtn,.groupsavebtn {
+    background: #07597E;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.groupmodelheader{
+    background: #07597E;
+    color: #ffff;
+}
+.groupmodelheader.modal-header>button {
+    opacity: 1;
+    color: #ffff;
+}
+
+/* new conversion modal */
+
+.mycontactlist {
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.conversationheding{
+    font-size: 16px;
+}
+.conversationheader{
+    background: #07597E;
+    color: #ffff;
+}
+.conversationheader>button{
+    color: #ffff;
+    opacity: 1;
+}
+.contactinner{
+    border-bottom: 1px solid #8080801c;
+}
+.contactinner:hover{
+    cursor: pointer;
+   
 }

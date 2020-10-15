@@ -9,17 +9,32 @@ export class Loggerbody extends React.Component {
     constructor(props){
     super(props);
     this.state = {
-         arr : [{"id":"1","name":"amit mishra","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
-        {"id":"2","name":"amit mishra1","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
-        {"id":"3","name":"amit mishra2","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
-        {"id":"4","name":"amit mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}
+         activechat : [{"id":"1","name":"arjun mishra","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+        {"id":"2","name":"suresh mishra1","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+        {"id":"3","name":"amrit mishra2","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+        {"id":"4","name":"lokesh mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}
       ],
-      selected: ""
-     
+      archivechat : [{"id":"1","name":"mohit mishra","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+      {"id":"2","name":"shivam mishra1","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+      {"id":"3","name":"prit mishra2","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
+      {"id":"4","name":"raju mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}
+    ],
+      selected: "",
+      activechatsearch:null,
+      archivechatsearch:null
       };
     }
    
-    
+    searchActivechat=(event)=>{
+      
+        let keyword = event.target.value;
+        console.log('search is actice',keyword)
+        this.setState({activechatsearch:keyword})
+      }
+      searchArchivechat=(event)=>{
+        let keyword = event.target.value;
+        this.setState({archivechatsearch:keyword})
+      }
 
     // ++++++++++
       changeColor = id => {
@@ -37,15 +52,11 @@ export class Loggerbody extends React.Component {
         document.getElementById("mySidenav").style.width = "0";
       }
       
-//    
 
-
-
-// 
-  
 
       render() {
-
+    
+        const { selected, activechat, archivechat } = this.state;
         $(document).ready(function(){
             $(".slideBtn").click(function(){    
               if($("#sidenav").width() == 0){      
@@ -60,7 +71,7 @@ export class Loggerbody extends React.Component {
               }
             });
           });
-        const { selected, arr } = this.state;
+       
         console.log(selected);
         return (
             <div className="content-wrapper">
@@ -76,17 +87,29 @@ export class Loggerbody extends React.Component {
                           <Createnewconversation /> 
                           {/* <i className="fa fa-comment chaticon" aria-hidden="true"></i> */}
                           </div>
-                          <div className="col-12 mt-1">
-                                <Form>
-                                        <Form.Group controlId="formBasicEmail">
-                                            <Form.Control type="text" placeholder="Search" className="serchInput" />
-                                        </Form.Group>
-                                </Form>
-                          </div>
+                          {/* <div className="col-12 mt-1">
+                             <Form>
+                                <Form.Group controlId="formBasicEmail">
+                                   <Form.Control type="text" placeholder="Search" className="serchInput"  onChange={(e)=>this.searchActivechat(e)}/>
+                                 </Form.Group>
+                             </Form>
+                          </div> */}
                           <div className="col-12 mt-1 ml-0 mr-0 pl-0 pr-0">
                           <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
-                          <Tab eventKey="home" title="Home" className="col-12">
-                                {arr.map(({ name, id, status,time, img}) => (
+                          <Tab eventKey="home" title="Home" className="col-12" tabClassName="asidetabchat">
+                          <Form>
+                                <Form.Group controlId="formBasicEmail" className="mt-3">
+                                   <Form.Control type="text" placeholder="Search" className="serchInput"  onChange={(e)=>this.searchActivechat(e)}/>
+                                 </Form.Group>
+                                </Form>
+
+                                {activechat.filter((data)=>{
+                                            if(this.state.activechatsearch == null)
+                                                return data
+                                            else if(data.name.toLowerCase().includes(this.state.activechatsearch.toLowerCase())){
+                                                return data
+                                            }
+                                        }).map(({ name, id, status,time, img}) => (
                                      <div  onClick={() => this.changeColor(id)}  className={ "row " + "loggerinnerbody " + (selected == id ? "blackButton" : "" )  }>
                                            {/*  */}
                                            <div  className="col-9 pt-2">
@@ -118,8 +141,20 @@ export class Loggerbody extends React.Component {
                                      </div>
                                 ))}
                            </Tab>
-                           <Tab eventKey="profile" title="Profile" className="col-12">
-                           {arr.map(({ name, id, status,time, img}) => (
+                           <Tab eventKey="profile" title="Profile" className="col-12" tabClassName="asidetabchat">
+                           <Form>
+                                <Form.Group controlId="formBasicEmail" className="mt-3">
+                                   <Form.Control type="text" placeholder="Search" className="serchInput"  onChange={(e)=>this.searchArchivechat(e)}/>
+                                 </Form.Group>
+                             </Form>
+                                                
+                                                    {archivechat.filter((data)=>{
+                                                if(this.state.archivechatsearch == null)
+                                                    return data
+                                                else if(data.name.toLowerCase().includes(this.state.archivechatsearch.toLowerCase())){
+                                                    return data
+                                                }
+                                            }).map(({ name, id, status,time, img}) => (
                                      <div  onClick={() => this.changeColor(id)}  className={ "row " + "loggerinnerbody " + (selected == id ? "blackButton" : "" )  }>
                                            {/*  */}
                                            <div  className="col-9 pt-2">
