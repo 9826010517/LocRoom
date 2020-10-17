@@ -449,6 +449,7 @@ p.logger_drptext {
     border-bottom:2px solid #fff;
     text-align: start;
     height: calc(100vh - 35vh);
+    margin-bottom: 54px !important;
 }
 #chat li{
     padding:10px 30px;

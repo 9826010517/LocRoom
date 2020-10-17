@@ -95,8 +95,8 @@ export class Loggerbody extends React.Component {
                              </Form>
                           </div> */}
                           <div className="col-12 mt-1 ml-0 mr-0 pl-0 pr-0">
-                          <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
-                          <Tab eventKey="home" title="Home" className="col-12" tabClassName="asidetabchat">
+                          <Tabs defaultActiveKey="activechat" id="uncontrolled-tab-example">
+                          <Tab eventKey="activechat" title="Active Chat" className="col-12" tabClassName="asidetabchat">
                           <Form>
                                 <Form.Group controlId="formBasicEmail" className="mt-3">
                                    <Form.Control type="text" placeholder="Search" className="serchInput"  onChange={(e)=>this.searchActivechat(e)}/>
@@ -130,9 +130,8 @@ export class Loggerbody extends React.Component {
                                                     </Dropdown.Toggle>
 
                                                     <Dropdown.Menu>
-                                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                                        <Dropdown.Item href="#/action-1">Delete</Dropdown.Item>
+                                                        <Dropdown.Item href="#/action-2">Archive Chat</Dropdown.Item>
                                                     </Dropdown.Menu>
                                                 </Dropdown>
                                                 </div>
@@ -141,7 +140,7 @@ export class Loggerbody extends React.Component {
                                      </div>
                                 ))}
                            </Tab>
-                           <Tab eventKey="profile" title="Profile" className="col-12" tabClassName="asidetabchat">
+                           <Tab eventKey="archivechat" title="Archive Chat" className="col-12" tabClassName="asidetabchat">
                            <Form>
                                 <Form.Group controlId="formBasicEmail" className="mt-3">
                                    <Form.Control type="text" placeholder="Search" className="serchInput"  onChange={(e)=>this.searchArchivechat(e)}/>
@@ -175,9 +174,8 @@ export class Loggerbody extends React.Component {
                                                     </Dropdown.Toggle>
 
                                                     <Dropdown.Menu>
-                                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                                        <Dropdown.Item href="#/action-1">Delete</Dropdown.Item>
+                                                        <Dropdown.Item href="#/action-2">Unarchive Chat</Dropdown.Item>
                                                     </Dropdown.Menu>
                                                 </Dropdown>
                                                 </div>

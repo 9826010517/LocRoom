@@ -146,10 +146,14 @@ import { Dropdown } from 'react-bootstrap';
           {"id":"4","name":"amit mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}
         ],
         selecteduser : [{"id":"3","name":"amit mishra2","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"},
-        {"id":"4","name":"amit mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}]
+        {"id":"4","name":"amit mishra3","status":"i am good","status":"i am good","time":"10am","img":"assets/adminsection/dist/img/user2-160x160.jpg"}],
+        addgroup:null,
         };
       }
-
+      addIngroup=(event)=>{
+        let keyword = event.target.value;
+        this.setState({addgroup:keyword})
+      }
       render() {
         const { alluser ,selecteduser } = this.state;
         return (
@@ -162,7 +166,7 @@ import { Dropdown } from 'react-bootstrap';
                          <Form>
                                 <Form.Group controlId="formBasicEmail mt-4">
                                   <Form.Label>Group Name</Form.Label>
-                                  <Form.Control type="text" placeholder="Enter group name" />
+                                  <Form.Control type="text" placeholder="Enter group name"   />
                                 </Form.Group>
                                 {['radio'].map((type) => (
                                     <div key={`inline-${type}`} className="mb-1">
@@ -174,8 +178,8 @@ import { Dropdown } from 'react-bootstrap';
                                   {['radio'].map((type) => (
                                     <div key={`inline-${type}`} className="mb-2">
                                       <Form.Label className="radioformgoruplabel">Group Segment - </Form.Label>
-                                      <Form.Check inline label="Public" type={type}  name="formHorizontalRadios" id={`inline-${type}-1`} />
-                                      <Form.Check inline label="Private" type={type}  name="formHorizontalRadios" id={`inline-${type}-2`} />
+                                      <Form.Check inline label="Public" type={type}  name="formHorizontalRadios1" id={`inline-${type}-3`} />
+                                      <Form.Check inline label="Private" type={type}  name="formHorizontalRadios1" id={`inline-${type}-4`} />
                                     </div>
                                   ))}
                           </Form>
@@ -187,13 +191,19 @@ import { Dropdown } from 'react-bootstrap';
                      <Form>
                     <Form.Group controlId="formsearch mt-3">
                       <Form.Label>Members : </Form.Label>
-                      <Form.Control type="text" placeholder="find member" />
+                      <Form.Control type="text" placeholder="find member" onChange={(e)=>this.addIngroup(e)} />
                     </Form.Group>
                     </Form>
                      </div>
                      <div className="membersdiv">
                      <div className="grouplisdetail">
-                            {alluser.map(({ name, id, status,time, img}) => (
+                            {alluser.filter((data)=>{
+                            if(this.state.addgroup == null)
+                                return data
+                            else if(data.name.toLowerCase().includes(this.state.addgroup.toLowerCase())){
+                                return data
+                            }
+                          }).map(({ name, id, status,time, img}) => (
                               <div className="row">
                                   {/*  */}
                                  <div  className="col-9 pt-2">
